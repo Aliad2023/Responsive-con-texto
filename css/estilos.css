@@ -4,6 +4,9 @@
 }
 
 /* VARIABLES */
+:root{
+    --titulo: 1.5rem;
+}
 
 /* CONTENIDO(background-image) MÓVIL "MOBILE-FIRST" made in spain */
 /* HEADER */
@@ -45,11 +48,11 @@
 
 /* CONTENIDO (img) MÓVIL */
 /* MAIN */
-main{
+.main__imagenes{
     display: grid;
     /* Gestiona las columnas automáticamente */
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-    grid-template-rows: repeat(2, 300px);
+    grid-template-rows: 300px;
 
     & img{
         width: 100%;
@@ -59,3 +62,18 @@ main{
 
     }
 }
+/* MAIN TEXTO */
+.main__textoTitulo{
+    background-color: #F6F6F6;
+    padding: 8vw;
+    @media only screen and (min-width:1000px){
+        padding: 4vw; 
+    }
+    & .main__titulo{
+        text-align: center;
+        font-size: var(--titulo);
+    }
+    & .main__parrafo{
+        text-align: justify;
+    }
+}    
